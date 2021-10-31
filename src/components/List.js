@@ -11,7 +11,7 @@ const List = () => {
       <div>
         Name Price
         <div>
-          <Data />
+          <Data info={info} />
         </div>
       </div>
     </div>
