@@ -12,12 +12,14 @@ export default function BasicTextFields() {
       noValidate
       autoComplete="off"
     >
-      <TextField
-        id="outlined-basic"
-        placeholder="Search"
-        label="Outlined"
-        variant="outlined"
-      />
+      <div className="container">
+        <TextField
+          id="outlined-basic"
+          placeholder="Search"
+          label="Outlined"
+          variant="outlined"
+        />
+      </div>
     </Box>
   );
 }

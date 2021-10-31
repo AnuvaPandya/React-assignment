@@ -1,4 +1,4 @@
-export default [
+export const Data = [
   {
     category: "Sporting Goods",
     price: "$49.99",
