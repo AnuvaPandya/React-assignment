@@ -7,7 +7,6 @@ const Items = (props) => {
         style={{
           color: props.stocked ? "black" : "red",
           border: "1px solid red",
-          borderSpacing: "15px",
           margin: "1rem auto",
         }}
       >

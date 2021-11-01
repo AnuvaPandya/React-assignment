@@ -6,8 +6,8 @@ const CategoryList = (props) => {
       <div
         style={{
           border: "1px solid cyan",
-          borderSpacing: "15px",
-          margin: "1rem auto",
+          borderSpacing: "5px",
+          //   margin: "1rem auto",
         }}
       >
         <b>{props.categoryName}</b>

@@ -5,10 +5,10 @@ function App() {
   return (
     <div
       style={{
-        border: "2px solid sandybrown",
-        borderSpacing: "15px 15px",
-        margin: "1rem auto",
-        padding: "20px",
+        margin: "8rem",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
       }}
     >
       <ItemList />

@@ -12,13 +12,12 @@ const ItemList = () => {
   const [includes, setIncludes] = useState([]);
 
   return (
-    <div>
+    <div style={{ border: "2px solid sandybrown" }}>
       <div
         style={{
           border: "1px solid blue",
-          borderSpacing: "1cm 2em",
-          padding: "8px",
-          margin: "5rem auto",
+          padding: "10px",
+          margin: "1rem",
         }}
       >
         <TextField
@@ -38,9 +37,8 @@ const ItemList = () => {
       <div
         style={{
           border: "1px solid green",
-          borderSpacing: "2cm 2em",
           padding: "10px",
-          margin: "5rem auto",
+          margin: "1rem",
         }}
       >
         <CategoryList
