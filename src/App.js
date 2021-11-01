@@ -1,12 +1,16 @@
 import "./App.css";
-import Items from "./components/Items";
 import ItemList from "./components/ItemList";
 
 function App() {
   return (
-    <div className="App">
-      {/* <List /> */}
-      <Items name={"Football"} price={"$49.99"} category={"Sporting Gooods"} />
+    <div
+      style={{
+        border: "2px solid sandybrown",
+        borderSpacing: "15px 15px",
+        margin: "1rem auto",
+        padding: "20px",
+      }}
+    >
       <ItemList />
     </div>
   );

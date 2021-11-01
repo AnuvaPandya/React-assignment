@@ -4,10 +4,18 @@ import "./ItemList.css";
 const Items = (props) => {
   return (
     <>
-      {/* <div className='heading-container'>
-      {props.category}
-    </div> */}
-      <div className="item-container">
+      <div
+        style={{
+          border: "1px solid cyan",
+          borderSpacing: "15px",
+          margin: "1rem auto",
+        }}
+      ></div>
+      <div
+        style={{
+          border: "1px solid red",
+        }}
+      >
         {props.name}
         {props.price}
       </div>

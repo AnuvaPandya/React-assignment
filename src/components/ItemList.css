@@ -1,15 +1,15 @@
 .first-container {
-  border: sandybrown;
+  border-color: sandybrown;
 }
 .searchbox-container {
-  border: blue;
+  border-color: blue;
 }
 .list-container {
-  border: green;
+  border-color: green;
 }
 .heading-container {
-  border: cyan;
+  border-color: cyan;
 }
 .item-container {
-  border: red;
+  border-color: red;
 }
