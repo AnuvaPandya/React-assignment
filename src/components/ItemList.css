@@ -1,0 +1,15 @@
+.first-container {
+  border: sandybrown;
+}
+.searchbox-container {
+  border: blue;
+}
+.list-container {
+  border: green;
+}
+.heading-container {
+  border: cyan;
+}
+.item-container {
+  border: red;
+}
