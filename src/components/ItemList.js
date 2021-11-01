@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Data } from "./Data";
 import Items from "./Items";
 import "./ItemList.css";
-// import SearchBox from "./SearchBox";
-// import { Checkbox } from "@mui/material";
+import TextField from "@mui/material/TextField";
+import { Checkbox } from "@mui/material";
 
 const ItemList = () => {
-  // const label = { inputProps: { "aria-label": "Checkbox demo" } };
+  const label = { inputProps: { "aria-label": "Checkbox demo" } };
+  const [store, setStore] = useState("");
+  const [includes, setIncludes] = useState([]);
 
   return (
     <div>
@@ -18,11 +20,19 @@ const ItemList = () => {
           margin: "5rem auto",
         }}
       >
-        {/* <div>
-          <Checkbox {...label} />
+        <TextField
+          id="outlined-basic"
+          label="Search"
+          variant="outlined"
+          onChange={(event) => setStore(event.target.value)}
+        />
+        <div>
+          <Checkbox
+            {...label}
+            onChange={(event) => setIncludes(event.target.checked)}
+          />
           Only show products in stock
-        </div> */}
-        {/* <SearchBox /> */}
+        </div>
       </div>
       <div
         style={{
@@ -32,15 +42,24 @@ const ItemList = () => {
           margin: "5rem auto",
         }}
       >
-        {Data.filter((item) => item.stocked == true).map((item) => {
-          return (
-            <Items
-              name={item.name}
-              price={item.price}
-              category={item.category}
-            />
-          );
-        })}
+        {Data.filter((item) => item.name.toLowerCase().includes(store))
+          .filter((item) => {
+            if (includes == false) {
+              return true;
+            }
+            if (includes == true) {
+              return item.stocked == true;
+            }
+          })
+          .map((item) => {
+            return (
+              <Items
+                name={item.name}
+                price={item.price}
+                category={item.category}
+              />
+            );
+          })}
       </div>
     </div>
   );

@@ -10,7 +10,9 @@ const Items = (props) => {
           borderSpacing: "15px",
           margin: "1rem auto",
         }}
-      ></div>
+      >
+        {props.category}
+      </div>
       <div
         style={{
           border: "1px solid red",
