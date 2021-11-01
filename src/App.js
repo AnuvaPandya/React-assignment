@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       {/* <List /> */}
-      <Items name={"Football"} price={"$49.99"} />
+      <Items name={"Football"} price={"$49.99"} category={"Sporting Gooods"} />
       <ItemList />
     </div>
   );

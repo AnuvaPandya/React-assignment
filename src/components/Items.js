@@ -3,10 +3,15 @@ import "./ItemList.css";
 
 const Items = (props) => {
   return (
-    <div>
-      {props.name}
-      {props.price}
-    </div>
+    <>
+      {/* <div className='heading-container'>
+      {props.category}
+    </div> */}
+      <div className="item-container">
+        {props.name}
+        {props.price}
+      </div>
+    </>
   );
 };
 
