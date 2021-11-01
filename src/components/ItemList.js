@@ -4,6 +4,7 @@ import Items from "./Items";
 import "./ItemList.css";
 import TextField from "@mui/material/TextField";
 import { Checkbox } from "@mui/material";
+import CategoryList from "./CategoryList";
 
 const ItemList = () => {
   const label = { inputProps: { "aria-label": "Checkbox demo" } };
@@ -42,24 +43,18 @@ const ItemList = () => {
           margin: "5rem auto",
         }}
       >
-        {Data.filter((item) => item.name.toLowerCase().includes(store))
-          .filter((item) => {
-            if (includes == false) {
-              return true;
-            }
-            if (includes == true) {
-              return item.stocked == true;
-            }
-          })
-          .map((item) => {
-            return (
-              <Items
-                name={item.name}
-                price={item.price}
-                category={item.category}
-              />
-            );
-          })}
+        <CategoryList
+          data={Data}
+          store={store}
+          includes={includes}
+          categoryName={"Sporting Goods"}
+        />
+        <CategoryList
+          data={Data}
+          store={store}
+          includes={includes}
+          categoryName={"Electronics"}
+        />
       </div>
     </div>
   );

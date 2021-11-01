@@ -1,21 +1,14 @@
 import React from "react";
-import "./ItemList.css";
 
 const Items = (props) => {
   return (
     <>
       <div
         style={{
-          border: "1px solid cyan",
+          color: props.stocked ? "black" : "red",
+          border: "1px solid red",
           borderSpacing: "15px",
           margin: "1rem auto",
-        }}
-      >
-        {props.category}
-      </div>
-      <div
-        style={{
-          border: "1px solid red",
         }}
       >
         {props.name}
