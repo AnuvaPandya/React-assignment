@@ -1,17 +1,17 @@
 import React from "react";
 
-const Items = (props) => {
+const Items = ({ name, price, stocked }) => {
   return (
     <>
       <div
         style={{
-          color: props.stocked ? "black" : "red",
+          color: stocked ? "black" : "red",
           border: "1px solid red",
           margin: "1rem auto",
         }}
       >
-        {props.name}
-        {props.price}
+        {name}
+        {price}
       </div>
     </>
   );

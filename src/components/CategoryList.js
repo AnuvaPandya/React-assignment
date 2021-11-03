@@ -1,26 +1,25 @@
 import Items from "./Items";
 
-const CategoryList = (props) => {
+const CategoryList = ({ categoryName, store, includes, data }) => {
   return (
     <div>
       <div
         style={{
           border: "1px solid cyan",
           borderSpacing: "5px",
-          //   margin: "1rem auto",
         }}
       >
-        <b>{props.categoryName}</b>
+        <b>{categoryName}</b>
       </div>
-      {props.data
-        .filter((item) => item.category == props.categoryName)
-        .filter((item) => item.name.toLowerCase().includes(props.store))
+      {data
+        .filter((item) => item.category == categoryName)
+        .filter((item) => item.name.toLowerCase().includes(store))
         .filter((item) => {
-          if (props.includes == false) {
+          if (!includes) {
             return true;
           }
-          if (props.includes == true) {
-            return item.stocked == true;
+          if (includes) {
+            return item.stocked;
           }
         })
         .map((item) => {
