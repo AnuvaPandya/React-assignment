@@ -41,18 +41,16 @@ const ItemList = () => {
           margin: "1rem",
         }}
       >
-        <CategoryList
-          data={Data}
-          store={store}
-          includes={includes}
-          categoryName={"Sporting Goods"}
-        />
-        <CategoryList
-          data={Data}
-          store={store}
-          includes={includes}
-          categoryName={"Electronics"}
-        />
+        {Data.map((item) => item.category).map((categoryName) => {
+          return (
+            <CategoryList
+              data={Data}
+              store={store}
+              includes={includes}
+              categoryName={categoryName}
+            />
+          );
+        })}
       </div>
     </div>
   );
