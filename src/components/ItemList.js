@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Data } from "./Data";
 import Items from "./Items";
 import "./ItemList.css";
@@ -9,7 +9,12 @@ import CategoryList from "./CategoryList";
 const ItemList = () => {
   const label = { inputProps: { "aria-label": "Checkbox demo" } };
   const [store, setStore] = useState("");
-  const [includes, setIncludes] = useState([]);
+  const [includes, setIncludes] = useState(false);
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    setData(Data);
+  }, []);
 
   return (
     <div style={{ border: "2px solid sandybrown" }}>
@@ -41,10 +46,10 @@ const ItemList = () => {
           margin: "1rem",
         }}
       >
-        {Data.map((item) => item.category).map((categoryName) => {
+        {[...new Set(data.map((item) => item.category))].map((categoryName) => {
           return (
             <CategoryList
-              data={Data}
+              data={data}
               store={store}
               includes={includes}
               categoryName={categoryName}
